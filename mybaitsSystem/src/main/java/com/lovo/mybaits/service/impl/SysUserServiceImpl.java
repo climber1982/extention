@@ -38,9 +38,9 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
 
     public List<SysUser> getByUserNameLikePage(String userName,long current) {
         QueryWrapper<SysUser> queryWrapper=new QueryWrapper<>();
-        queryWrapper.like("user_name",userName+"%");
+        queryWrapper.gt("userId",2);
         IPage<SysUser> page =null;
-           page=  this.page(new Page<>(1,8),queryWrapper);
+           page=  this.page(new Page<>(current,8),queryWrapper);
          return   page.getRecords();
 
     }
