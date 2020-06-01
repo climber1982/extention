@@ -8,6 +8,7 @@
         <module>websocket</module>
         <module>powerSystem</module>
         <module>powerClient</module>
+        <module>shiroSystem</module>
     </modules>
 
     <name>extention</name>
