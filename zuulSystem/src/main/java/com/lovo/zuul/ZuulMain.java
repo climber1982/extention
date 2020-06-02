@@ -1,13 +1,15 @@
-package com.lovo.jwtclient;
+package com.lovo.zuul;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class PowerClientMain {
+@EnableZuulProxy
+public class ZuulMain {
     public static void main(String[] args) {
-        SpringApplication.run(PowerClientMain.class);
+        SpringApplication.run(ZuulMain.class);
     }
 }

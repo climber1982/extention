@@ -21,4 +21,9 @@ public class UserController {
     public String getcors(){
          return  "hello cors";
     }
+
+    @GetMapping("getRestTemplet")
+    public String getRestTemplet(){
+        return  "hello RestTemplet";
+    }
 }

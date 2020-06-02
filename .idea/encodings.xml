@@ -5,8 +5,10 @@
     <file url="file://$PROJECT_DIR$/mybaitsSystem" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/powerClient" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/powerSystem" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/register" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shiroSystem" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/webserviceSystem" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/websocket" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuulSystem" charset="UTF-8" />
   </component>
 </project>
