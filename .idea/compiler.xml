@@ -9,6 +9,8 @@
         <module name="mybaitsSystem" />
         <module name="powerClient" />
         <module name="powerSystem" />
+        <module name="rabbitmqClient" />
+        <module name="rabbitmqSystem" />
         <module name="register" />
         <module name="shiroSystem" />
         <module name="webserviceSystem" />
@@ -23,6 +25,8 @@
       <module name="mybaitsSystem" options="-parameters" />
       <module name="powerClient" options="-parameters" />
       <module name="powerSystem" options="-parameters" />
+      <module name="rabbitmqClient" options="-parameters" />
+      <module name="rabbitmqSystem" options="-parameters" />
       <module name="register" options="-parameters" />
       <module name="shiroSystem" options="-parameters" />
       <module name="webserviceSystem" options="-parameters" />

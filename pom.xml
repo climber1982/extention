@@ -13,6 +13,8 @@
         <module>webserviceSystem</module>
         <module>register</module>
         <module>zuulSystem</module>
+        <module>rabbitmqSystem</module>
+        <module>rabbitmqClient</module>
     </modules>
 
     <name>extention</name>
