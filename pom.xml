@@ -10,6 +10,7 @@
         <module>powerClient</module>
         <module>shiroSystem</module>
         <module>mybaitsSystem</module>
+        <module>webserviceSystem</module>
     </modules>
 
     <name>extention</name>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cors</title>
+</head>
+<body>
+<div id="box">
+  <input type="button" value="访问后台" @click="get" ></input>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+  <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+  <script>
+        new Vue({
+          el:'#box',
+          data:{
+              msg:'Hello World!',
+          },
+          methods:{
+              get:function(){
+                  //发送get请求
+                  this.$http.get('http://127.0.0.1:8001/getcors').then(function(res){
+                      alert(res)
+                  },function(){
+                      console.log('请求失败处理');
+                  });
+              }
+          }
+      });
+  </script>
+</body>
+</html>
