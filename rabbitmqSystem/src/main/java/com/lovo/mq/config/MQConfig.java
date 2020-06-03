@@ -53,10 +53,10 @@ public class MQConfig {
         return QueueBuilder.durable("pointQueueJ174").withArguments(args).build();
     }
 
-    @Bean
-    public Queue pointQueueJ174(){
-        return new Queue("pointQueueJ174");
-    }
+//    @Bean
+//    public Queue pointQueueJ174(){
+//        return new Queue("pointQueueJ174");
+//    }
     //创建交换机
     @Bean
     public DirectExchange pointDirectExchange(){
@@ -65,8 +65,8 @@ public class MQConfig {
 
     //把队列与交换机进行绑定
     @Bean
-    public Binding pointQueueTopointDirectExchange(Queue pointQueueJ174,DirectExchange pointDirectExchange){
-        return BindingBuilder.bind(pointQueueJ174).to(pointDirectExchange).with("pointKey");
+    public Binding pointQueueTopointDirectExchange(Queue pointQueue,DirectExchange pointDirectExchange){
+        return BindingBuilder.bind(pointQueue).to(pointDirectExchange).with("pointKey");
     }
 
 

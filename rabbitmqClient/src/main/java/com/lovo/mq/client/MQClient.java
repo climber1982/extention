@@ -20,6 +20,11 @@ public class MQClient {
     public void getMessage2(String message, Channel channel, @Header(AmqpHeaders.DELIVERY_TAG) long tag){
 
         System.out.println(message);
+        try {
+            channel.basicNack(tag,false,true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 //        //手动确认
 //        try {
 //            //channel.basicNack(tag,false);
