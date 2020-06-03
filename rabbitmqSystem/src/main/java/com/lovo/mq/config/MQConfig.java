@@ -43,13 +43,13 @@ public class MQConfig {
     @Bean
     public Queue pointQueue(){
         //关联死信交换机
-        Map<String, Object> args = new HashMap<>(2);
+        Map<String, Object> args = new HashMap<>(3);
         // x-dead-letter-exchange    这里声明当前队列绑定的死信交换机
         args.put("x-dead-letter-exchange", "deadExchange");
         // x-dead-letter-routing-key  这里声明当前队列的死信路由key
         args.put("x-dead-letter-routing-key","dead_routing_key");
         // x-message-ttl  声明队列的TTL
-       // args.put("x-message-ttl", 6000);
+       args.put("x-message-ttl", 6000);
         return QueueBuilder.durable("pointQueueJ174").withArguments(args).build();
     }
 
