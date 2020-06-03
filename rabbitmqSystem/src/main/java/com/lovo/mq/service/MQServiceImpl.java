@@ -18,6 +18,8 @@ public class MQServiceImpl implements MQService{
 
         public void confirm(CorrelationData correlationData, boolean b, String s) {
             System.out.println("correlationData="+correlationData.getId());
+            //修改数据库
+
             System.out.println("b="+b);
             System.out.println("s="+s);
             //写业务  如果 b=true 代表数据已经放入到队列，根据correlationData 修改本地数据tag=1()
@@ -28,6 +30,7 @@ public class MQServiceImpl implements MQService{
         @Override
         public void returnedMessage(Message message, int i, String s, String s1, String s2) {
             System.out.println("message="+message);
+
             System.out.println("i="+i);
             System.out.println("s="+s);
             System.out.println("s1="+s1);
@@ -43,6 +46,8 @@ public class MQServiceImpl implements MQService{
        // String uuid= UUID.randomUUID().toString();
         //消息确认唯一标志，一定要保证唯一
         CorrelationData correlationData=new CorrelationData("order0001");
+        //订单保存到数据库
+
        // System.out.println(correlationData.getId()+"/uuid="+uuid);
         rabbitTemplate.convertAndSend("pointDirectExchange","pointKey",message,correlationData);
 
