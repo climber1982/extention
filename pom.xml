@@ -15,6 +15,9 @@
         <module>zuulSystem</module>
         <module>rabbitmqSystem</module>
         <module>rabbitmqClient</module>
+        <module>lockone</module>
+        <module>locktwo</module>
+        <module>publicresouce</module>
     </modules>
 
     <name>extention</name>

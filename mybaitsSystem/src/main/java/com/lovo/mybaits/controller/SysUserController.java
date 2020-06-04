@@ -45,8 +45,17 @@ public class SysUserController {
      return userService.getByUserName(userName);
      }
 
+
+
     @RequestMapping("getByUserNameLikePage")
     public List<SysUser> getByUserNameLikePage(String userName,long current){
         return userService.getByUserNameLikePage(userName, current);
+    }
+     @PostMapping("getUserNameAndPassword")
+    public SysUser getUserNameAndPassword(String userName,String password){
+        return userService.getUserNameAndPassword(userName,password);
+//         SysUser sysUser=new SysUser();
+//         System.out.println("你访问了我");
+//         return sysUser;
     }
 }

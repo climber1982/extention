@@ -1,0 +1,6 @@
+server:
+  port: 7002
+eureka:
+    client:
+      registerWithEureka: false  #是否向服务器注册
+      fetchRegistry: false

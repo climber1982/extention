@@ -33,4 +33,12 @@ public interface SysUserService extends IService<SysUser> {
      * @return
      */
     public List<SysUser> getByUserNameLikePage(String  userName,long current);
+
+    /**
+     * 根据用户和密码查询出用户对象
+     * @param userName
+     * @param password
+     * @return
+     */
+    public SysUser getUserNameAndPassword(String userName,String password);
 }
