@@ -4,6 +4,9 @@ import com.lovo.mybaits.model.SysUser;
 import com.lovo.mybaits.util.JedisDB;
 import com.lovo.mybaits.util.ObjectBytes;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class JedisMain {
 
     public static void main(String[] args) {
@@ -11,16 +14,29 @@ public class JedisMain {
 //        jedisMain.setString("userName","赵云");
 //        System.out.println(jedisMain.getString("userName"));
 
-        SysUser user=new SysUser();
-        user.setUName("zy");
-        user.setUserName("赵云");
-        jedisMain.setObject("user",user);
+//        SysUser user=new SysUser();
+//        user.setUName("zy");
+//        user.setUserName("赵云");
 
+//           Map<String,String> map=new HashMap<>();
+//           map.put("uname","zy");
+//           map.put("userName","赵云");
+//
+//           jedisMain.setHashs("student",map);
+//
+//        System.out.println(jedisMain.getHash("student","uname"));
 
-
+        jedisMain.testStrings("a","b","c","c");
 
     }
 
+    public  void testStrings(String...strings){
+        if(null!=strings&&strings.length>0){
+            for (String str:strings) {
+                System.out.println(str);
+            }
+        }
+    }
     /**
      * 保持字符串
      */
@@ -46,5 +62,19 @@ public class JedisMain {
      public Object getObject(String key){
          return  ObjectBytes.unserizlize(JedisDB.creatJedis().get(key.getBytes()));
      }
+
+     public  void setHash(String key,String filed,String val){
+         JedisDB.creatJedis().hset(key,filed,val);
+     }
+
+     public String getHash(String key,String filed){
+        return JedisDB.creatJedis().hget(key,filed);
+     }
+
+     public void setHashs(String key, Map<String,String> map){
+         JedisDB.creatJedis().hmset(key,map);
+     }
+
+
 
 }
