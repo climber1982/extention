@@ -37,3 +37,8 @@ eureka:
   client:
     registerWithEureka: false  #是否向服务器注册
     fetchRegistry: false
+tx-lcn:
+  client:
+    manager-address: 127.0.0.1:8070
+  logger:
+    enabled: true

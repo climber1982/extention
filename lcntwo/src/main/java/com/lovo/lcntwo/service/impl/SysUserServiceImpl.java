@@ -3,6 +3,7 @@ package com.lovo.lcntwo.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.lovo.lcntwo.bean.SysUser;
 import com.lovo.lcntwo.mapper.SysUserMapper;
 import com.lovo.lcntwo.service.SysUserService;
@@ -22,9 +23,10 @@ import java.util.List;
 @Service
 public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> implements SysUserService {
     @Transactional(rollbackFor = Exception.class)
+    //@LcnTransaction
     public boolean savaUser(SysUser user) {
         this.save(user);
-        int i=1/0;
+       /// int i=1/0;
         return false;
     }
 

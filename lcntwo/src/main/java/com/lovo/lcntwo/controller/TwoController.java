@@ -15,11 +15,9 @@ public class TwoController {
         SysUser user=new SysUser();
         user.setUserName("曹操");
         user.setUName("cc");
-        try {
+
             sysUserService.savaUser(user);
-        }catch (Exception e){
-              return "失败";
-        }
+
         return "成功";
     }
 

@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.lovo.lcnone.bean.SysUser;
 import com.lovo.lcnone.mapper.SysUserMapper;
 import com.lovo.lcnone.service.SysUserService;
@@ -31,10 +32,12 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
     private RestTemplate restTemplate;
 
     @Transactional(rollbackFor = Exception.class)
+    //@LcnTransaction
     public boolean savaUser(SysUser user) {
         this.save(user);
         //远程调用
         restTemplate.getForEntity("http://127.0.0.1:6667/sava",null);
+       int i=1/0;
         return true;
     }
 
