@@ -2,12 +2,13 @@
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lcnone" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lcntwo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lockone" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/locktwo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybaitsSystem" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/powerClient" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/powerSystem" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/powerSystem/lockone" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/publicresouce" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rabbitmqClient" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rabbitmqSystem" charset="UTF-8" />

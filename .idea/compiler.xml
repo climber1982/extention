@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Lcnone" />
+        <module name="lcntwo" />
         <module name="lockone" />
         <module name="locktwo" />
         <module name="mybaitsSystem" />
@@ -23,7 +25,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Lcnone" options="-parameters" />
       <module name="extention" options="-parameters" />
+      <module name="lcntwo" options="-parameters" />
       <module name="lockone" options="-parameters" />
       <module name="locktwo" options="-parameters" />
       <module name="mybaitsSystem" options="-parameters" />

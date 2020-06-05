@@ -18,6 +18,8 @@
         <module>lockone</module>
         <module>locktwo</module>
         <module>publicresouce</module>
+        <module>Lcnone</module>
+        <module>lcntwo</module>
     </modules>
 
     <name>extention</name>
